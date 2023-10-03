@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e659789-edd6-4419-82ff-4cd654412e41" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VNu6IkDULP5jGSVFrsV0algHxS" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/Work/LMS/LMS_Backend/LMS_Ws" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\OCT_L1\da-api\src\main\java\com\globits\da\service\impl" />
+      <recent name="C:\Users\Admin\Desktop\OCT_L1\da-api\src\main\java\com\globits\da\service" />
+      <recent name="C:\Users\Admin\Desktop\OCT_L1\da-api\src\main\java\com\globits\da\dto" />
+      <recent name="C:\Users\Admin\Desktop\OCT_L1\da-api\src\main\java\com\globits\da" />
+      <recent name="C:\Users\Admin\Desktop\OCT_L1\da-app\src\main\java\com\globits" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.globits.da.service.impl" />
+      <recent name="com.globits.da.repository" />
+      <recent name="com.globits.da.model" />
+      <recent name="com.globits.da.dto.search" />
+      <recent name="com.globits.model" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.globits.da.domain" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DAApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="da-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.globits.DAApplication" />
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Admin\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e659789-edd6-4419-82ff-4cd654412e41" name="Changes" comment="" />
+      <created>1694688682913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694688682913</updated>
+      <workItem from="1694688684522" duration="442000" />
+      <workItem from="1694694635247" duration="61000" />
+      <workItem from="1695034933259" duration="441000" />
+      <workItem from="1695039291269" duration="24000" />
+      <workItem from="1695039409998" duration="165000" />
+      <workItem from="1695115451140" duration="5000" />
+      <workItem from="1695282126546" duration="7110000" />
+      <workItem from="1695722627476" duration="82000" />
+      <workItem from="1695779832970" duration="8440000" />
+      <workItem from="1695802614686" duration="5948000" />
+      <workItem from="1695809188033" duration="215000" />
+      <workItem from="1695810430224" duration="251000" />
+      <workItem from="1695810726369" duration="185000" />
+      <workItem from="1695889298596" duration="259000" />
+      <workItem from="1695889634618" duration="39000" />
+      <workItem from="1695889696818" duration="5639000" />
+      <workItem from="1695895402374" duration="341000" />
+      <workItem from="1696005742054" duration="5113000" />
+      <workItem from="1696215157468" duration="7617000" />
+      <workItem from="1696313132964" duration="9789000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/da-api/src/main/java/com/globits/da/service/impl/ProvinceImp.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/da-api/src/main/java/com/globits/da/service/impl/ProvinceImp.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.globits.da.dto.ProvinceDTO" memberName="districts" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
