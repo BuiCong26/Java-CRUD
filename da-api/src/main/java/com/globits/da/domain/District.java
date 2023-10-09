@@ -2,17 +2,16 @@ package com.globits.da.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.codehaus.jackson.annotate.JsonBackReference;
 import org.codehaus.jackson.annotate.JsonManagedReference;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @Builder
 @Entity
 @NoArgsConstructor
@@ -32,6 +31,6 @@ public class District {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "province_id",nullable=false,unique=true)
     private Province province;
-    @OneToMany
-    private Set<Commune> communes;
+    @OneToMany(mappedBy = "district", orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Commune> communes;
 }

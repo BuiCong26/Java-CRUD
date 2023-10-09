@@ -29,6 +29,9 @@ public class Employee {
     private String phone;
     @Column(name = "age")
     private Integer age;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "commune_id", nullable = false)
+    private Commune commune;
     @Override
     public String toString(){
         return id+","+code+","+name+","+email+","+phone+","+age;

@@ -1,9 +1,12 @@
 package com.globits.da.service.impl;
 
+import com.globits.da.domain.Commune;
 import com.globits.da.domain.District;
 import com.globits.da.domain.Province;
+import com.globits.da.dto.CommuneDTO;
 import com.globits.da.dto.DistrictDTO;
 import com.globits.da.dto.ProvinceDTO;
+import com.globits.da.repository.CommuneRepo;
 import com.globits.da.repository.DistrictRepo;
 import com.globits.da.repository.ProvinceRepo;
 import com.globits.da.service.ProvinceService;
@@ -21,6 +24,7 @@ public class ProvinceImp implements ProvinceService {
     ProvinceRepo provinceRepo;
     DistrictRepo districtRepo;
     DistrictImp districtImp;
+    CommuneRepo communeRepo;
     @Transactional
     @Override
     public List<Province> findAllProvince() throws Exception{
@@ -87,20 +91,20 @@ public class ProvinceImp implements ProvinceService {
     @Transactional
     @Override
     public void addProvinceAndListDistrict(ProvinceDTO province){
-        Province a = Province.builder()
+        Province addProvince = Province.builder()
                 .code(province.getCode())
                 .name(province.getName())
                 .type(province.getType())
                 .build();
-        provinceRepo.save(a);
+        provinceRepo.save(addProvince);
         for(DistrictDTO d: province.getDistricts()){
-            District saveDistrict = District.builder()
+            District addDistrict = District.builder()
                     .name(d.getName())
                     .code(d.getCode())
                     .type(d.getType())
-                    .province(a)
+                    .province(addProvince)
                     .build();
-            districtRepo.save(saveDistrict);
+            districtRepo.save(addDistrict);
         }
 
     }
@@ -116,11 +120,11 @@ public class ProvinceImp implements ProvinceService {
 
     @Transactional
     @Override
-    public void updateProvinceAndDistrict(ProvinceDTO provinceUpdate){
-        Optional<Province> provinceOpt = provinceRepo.findById(provinceUpdate.getId());
+    public void updateProvinceAndDistrict(ProvinceDTO updateProvince){
+        Optional<Province> provinceOpt = provinceRepo.findById(updateProvince.getId());
         Province province = provinceOpt.get();
         List<District> districts = new ArrayList<>();
-        List<DistrictDTO> districtDTOS = provinceUpdate.getDistricts();
+        List<DistrictDTO> districtDTOS = updateProvince.getDistricts();
         if(province != null){
 
             for(DistrictDTO d : districtDTOS){
@@ -140,10 +144,10 @@ public class ProvinceImp implements ProvinceService {
 
             }
             province = Province.builder()
-                    .id(provinceUpdate.getId())
-                    .name(provinceUpdate.getName())
-                    .code(provinceUpdate.getCode())
-                    .type(provinceUpdate.getType())
+                    .id(updateProvince.getId())
+                    .name(updateProvince.getName())
+                    .code(updateProvince.getCode())
+                    .type(updateProvince.getType())
                     .districts(districts)
                     .build();
             provinceRepo.save(province);
@@ -151,6 +155,34 @@ public class ProvinceImp implements ProvinceService {
         }
     }
 
+    @Transactional
+    @Override
+    public void addProvinceAndListDistrictAndListCommune(ProvinceDTO provinceDTO){
+        Province p = Province.builder()
+                .name(provinceDTO.getName())
+                .code(provinceDTO.getCode())
+                .type(provinceDTO.getType())
+                .build();
+        provinceRepo.save(p);
+        for(DistrictDTO districtDTO : provinceDTO.getDistricts()){
+            District d = District.builder()
+                    .name(districtDTO.getName())
+                    .code(districtDTO.getCode())
+                    .type(districtDTO.getType())
+                    .province(p)
+                    .build();
+            districtRepo.save(d);
+            for(CommuneDTO communeDTO : districtDTO.getCommunes()){
+                Commune c = Commune.builder()
+                        .name(communeDTO.getName())
+                        .code(communeDTO.getCode())
+                        .type(communeDTO.getType())
+                        .district(d)
+                        .build();
+                communeRepo.save(c);
+            }
+        }
+    }
     public ProvinceDTO entityToDTO(Province province){
         List<District> districts = province.getDistricts();
         List<DistrictDTO> lstDistrict = new ArrayList<>();

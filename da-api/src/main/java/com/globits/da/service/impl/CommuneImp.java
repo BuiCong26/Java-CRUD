@@ -1,6 +1,9 @@
 package com.globits.da.service.impl;
 
 import com.globits.da.domain.Commune;
+import com.globits.da.domain.District;
+import com.globits.da.dto.CommuneDTO;
+import com.globits.da.dto.DistrictDTO;
 import com.globits.da.repository.CommuneRepo;
 import com.globits.da.service.CommuneService;
 import lombok.AllArgsConstructor;
@@ -59,5 +62,15 @@ public class CommuneImp implements CommuneService {
         }catch (Exception e){
             e.getMessage();
         }
+    }
+    public CommuneDTO entityToDTO(Commune commune){
+        CommuneDTO c = CommuneDTO.builder()
+                .id(commune.getId())
+                .name(commune.getName())
+                .code(commune.getCode())
+                .type(commune.getType())
+                .district_id(commune.getDistrict().getId())
+                .build();
+        return c;
     }
 }

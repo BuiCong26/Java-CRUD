@@ -13,4 +13,5 @@ public interface ProvinceService {
     void addProvinceAndListDistrict(ProvinceDTO province);
     List<ProvinceDTO> findAllProvinceWithDistrict();
     void updateProvinceAndDistrict(ProvinceDTO lstProvince);
+    void addProvinceAndListDistrictAndListCommune(ProvinceDTO provinceDTO);
 }

@@ -2,6 +2,7 @@ package com.globits.da.controller;
 
 import com.globits.da.domain.District;
 import com.globits.da.dto.DistrictDTO;
+import com.globits.da.dto.ProvinceDTO;
 import com.globits.da.service.DistrictService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,10 @@ public class DistrictCtrl {
     @PostMapping("/addDistrict")
     public void addNewDistrict(@RequestBody List<District> district){
         districtService.addListDistrict(district);
+    }
+    @GetMapping("/findAllDistrictWithCommune")
+    public List<DistrictDTO> findAllDistrictWithCommune(){
+        return districtService.findAllDistrictWithCommune();
     }
     @PostMapping("/updateDistrict")
     public void updateDistrict(@RequestBody District district){
@@ -35,5 +40,13 @@ public class DistrictCtrl {
     @GetMapping("/deleteDistrictByProvinceId")
     public void deleteDistrictByProvinceId(@RequestParam("id")int id){
         districtService.deleteDistrictByProvinceId(id);
+    }
+    @PostMapping("/addDistrictAndListCommune")
+    public void addProvince(@RequestBody DistrictDTO district){
+        districtService.addDistrictAndListCommune(district);
+    }
+    @PostMapping("/updateDistrictAndCommune")
+    public void updateProvinceAndDistrict(@RequestBody DistrictDTO district){
+        districtService.updateDistrictAndCommune(district);
     }
 }

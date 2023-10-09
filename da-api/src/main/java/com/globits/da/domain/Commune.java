@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Builder
@@ -24,7 +25,9 @@ public class Commune {
     private String code;
     @Column(name = "type")
     private String type;
-    @ManyToOne
-    @JoinColumn(name = "district_id")
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "district_id", nullable = false)
     private District district;
+    @OneToMany(mappedBy = "commune")
+    private List<Employee> employees;
 }

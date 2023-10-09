@@ -44,4 +44,8 @@ public class ProvinceCtrl {
     public void updateProvinceAndDistrict(@RequestBody ProvinceDTO province){
         provinceService.updateProvinceAndDistrict(province);
     }
+    @PostMapping("/addProvinceAndListDistrictAndListCommune")
+    public void addProvinceAndListDistrictAndListCommune(@RequestBody ProvinceDTO province){
+        provinceService.addProvinceAndListDistrictAndListCommune(province);
+    }
 }
